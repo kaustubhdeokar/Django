@@ -6,5 +6,6 @@ from django.contrib.auth import login
 urlpatterns = [
     url(r'^$',views.home),
     url(r'^login/$',views.login),
+    url(r'^logout/$',views.logout),
     
 ]
