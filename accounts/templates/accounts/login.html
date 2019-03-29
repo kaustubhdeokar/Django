@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>overwritten</title>
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>You can login here</p>
+  
+    <br><br>
+    <input type="text" name="name">
+    <br><br>
+    <input type="password" name="password">
+    <br><br>
+    <button class="btn btn-default" name="btn">Login</button>
+</form>
+{% endblock %}
