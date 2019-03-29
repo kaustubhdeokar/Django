@@ -1,0 +1,33 @@
+for django admin page-
+	Username:kaustubh
+	Password:Rashford@10
+
+Create project
+	django-admin startproject project-name . (. for directory)
+	python manage.py runserver
+
+	(this will start the project)
+
+Info-
+	if in settings.py we change the name of the databases to 
+
+	anytime making changes to models.py we have to execute the commands given below
+
+	python manage.py makemigrations
+	python manage.py migrate
+
+	when we do python manage.py shell
+	-The whole of the project will work inside the python command interpreter. 
+
+Adding products-
+	We can add products by two ways.
+		-from the django website directly
+		-or we can type in the root folder (where the manage.py file is present)
+			- python manage.py shell
+				-a shell appears and then we can type
+					-from products.model import Product #<-products is the app name> 
+
+				to create a product Product.objects.create(title='Newer title', price=12.12, summary='cool')
+
+Also for an error to exist in the admin page in we have to use both 
+the makemigrations and migrate command.
